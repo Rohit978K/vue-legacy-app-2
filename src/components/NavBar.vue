@@ -29,7 +29,7 @@
           <form class="d-flex" role="search">
 
             <input
-              class="form-control wide mx-3"
+              class="form-control mx-3"
               list="datalistOptions"
               placeholder="Type to search..."
             />

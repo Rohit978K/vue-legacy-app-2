@@ -12,7 +12,7 @@
         >
         <b-button @click="items = []">Clear Data</b-button>
       </b-col>
-      <b-col md="3" class="table-dtl">
+      <b-col md="3" class="table-dtl mt-2">
         <md-card>
           <md-card-content>
             <div>Total Rows: {{ totalRecords }}</div>
@@ -36,7 +36,7 @@
           :items="items"
           :fields="fields"
           :busy="isBusy"
-          class="bg-white"
+          class="mt-3"
         >
           <template #table-busy>
             <div class="text-center text-danger my-2">
@@ -69,7 +69,6 @@ export default {
       items: [],
       isBusy: false,
       totalItems: 0,
-      darkMode: false,
     };
   },
   computed: {
@@ -78,7 +77,8 @@ export default {
       return total;
     },
     checkDarkMode() {
-      const darkModeEnabled = sessionStorage.getItem("dark-mode-enabled");
+      let darkModeEnabled = 'undefined'
+      darkModeEnabled = sessionStorage.getItem("dark-mode-enabled");
       if (darkModeEnabled === "dark-mode") {
         return true;
       }
@@ -103,5 +103,8 @@ export default {
         });
     },
   },
+  beforeDestroy() {
+    sessionStorage.setItem("dark-mode-enabled", '')
+  }
 };
 </script>
