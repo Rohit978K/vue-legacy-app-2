@@ -1,0 +1,38 @@
+#app {
+    padding: 25px;
+    background-color: white;
+    color: black;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    overflow: auto;
+    height: 100vh;
+  }
+  
+ #app.dark-mode {
+    background-color: black;
+    color: white;
+  }
+
+  .text-left {
+    text-align: left;
+  }
+  
+  .md-card {
+    width: 320px;
+    margin: 4px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .navbar {
+    opacity: 80%;
+  }
+
+  .table-dtl {
+    background-color:rgba(128,128,128, 0.2);
+    border-radius: 10px;
+  }
+  
